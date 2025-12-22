@@ -11,8 +11,8 @@ Console.WriteLine("Приближенное решение методом про
 
 for (int i = 0; i < n; i++)
 {
-    xx = (1 + Math.Sin(y - 0.5)) / 3;
-    yy = 1.5 - Math.Cos(x);
+    xx = (Math.Sin(y) - 1.0) / 2.0;
+    yy = Math.Cos(x + 0.5) - 2.0;
     x = xx;
     y = yy;
 }
