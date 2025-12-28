@@ -31,11 +31,11 @@ Console.WriteLine("y=[" + yIntr[0] + "; " + yIntr[1] + "]");
 Console.WriteLine();
 Console.WriteLine("Интервальное расширение:");
 
-xIntrNew[0] = (1 + Math.Sin(yIntr[0] - 0.5)) / 3;
-xIntrNew[1] = (1 + Math.Sin(yIntr[1] - 0.5)) / 3;
+xIntrNew[0] = (Math.Sin(yIntr[0]) - 1.0) / 2.0;
+xIntrNew[1] = (Math.Sin(yIntr[1]) - 1.0) / 2.0;
 
-yIntrNew[0] = 1.5 - Math.Cos(xIntr[0]); ;
-yIntrNew[1] = 1.5 - Math.Cos(xIntr[1]); ;
+yIntrNew[0] = Math.Cos(xIntr[0] + 0.5) - 2.0;
+yIntrNew[1] = Math.Cos(xIntr[1] + 0.5) - 2.0;
 
 Console.WriteLine("x=[" + xIntrNew[0] + "; " + xIntrNew[1] + "]");
 Console.WriteLine("y=[" + yIntrNew[0] + "; " + yIntrNew[1] + "]");
